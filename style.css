@@ -33,7 +33,7 @@ a {
 }
 
 a:hover, a:focus {
-    text-decoration: none;
+    text-decoration: none; /*para tirar o sublinhado de link do nav*/
 }
 
 h1 {
@@ -50,12 +50,10 @@ h1 {
     margin: 16px;
     color: white;
     font-weight: 400;
-    transition: color 0.3s;
-    
 }
 
 .nav-links a:hover {
-    color: #baa1e2;
+    color: #ba9bec;
 }
 
 .efeito-maquina {
@@ -66,9 +64,10 @@ h1 {
     margin-bottom: 20px;
     border-right: 4px solid;
     width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(70, end) forwards, blinking 0.75s step-end infinite;
+    white-space: nowrap; /*para nao quebrar a linha*/
+    overflow: hidden; /*esconder os caracteres que ainda nao foram digitados*/
+    animation: typing 4s steps(70) forwards, /*animação da maquina do efeito maquina de escrever*/
+    blinking 0.75s step-end infinite; /*duração de piscadas e para ir parar e ao recarregar a pag. fazer denovo o efeito*/
 }
 
 @keyframes typing {
@@ -76,7 +75,7 @@ h1 {
         width: 0;
     }
     to {
-        width: 91ch;
+        width: 142ch; /*width com a quantidade de caracteres no p*/
     }
 }
 
@@ -116,5 +115,4 @@ img {
 .logo img {
     height: 40px;
     width: auto;
-
 }
